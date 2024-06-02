@@ -55,49 +55,49 @@ function CMain(oData) {
 
     s_aSoundsInfo = new Array();
     s_aSoundsInfo.push({
-      path: ".",
+      path: "./",
       filename: "win",
       loop: false,
       volume: 1,
       ingamename: "win",
     });
     s_aSoundsInfo.push({
-      path: ".",
+      path: "./",
       filename: "press_but",
       loop: false,
       volume: 1,
       ingamename: "press_but",
     });
     s_aSoundsInfo.push({
-      path: ".",
+      path: "./",
       filename: "gameover",
       loop: false,
       volume: 1,
       ingamename: "gameover",
     });
     s_aSoundsInfo.push({
-      path: ".",
+      path: "./",
       filename: "soundtrack",
       loop: true,
       volume: 1,
       ingamename: "soundtrack",
     });
     s_aSoundsInfo.push({
-      path: ".",
+      path: "./",
       filename: "scratch",
       loop: false,
       volume: 1,
       ingamename: "scratch",
     });
     s_aSoundsInfo.push({
-      path: ".",
+      path: "./",
       filename: "no_win",
       loop: false,
       volume: 1,
       ingamename: "no_win",
     });
     s_aSoundsInfo.push({
-      path: ".",
+      path: "./",
       filename: "particle",
       loop: false,
       volume: 1,
@@ -106,7 +106,7 @@ function CMain(oData) {
 
     for (var k = 0; k < NUM_SYMBOLS; k++) {
       s_aSoundsInfo.push({
-        path: ".",
+        path: "./",
         filename: "symbol" + k,
         loop: true,
         volume: 1,
@@ -172,37 +172,46 @@ function CMain(oData) {
   this._loadImages = function () {
     s_oSpriteLibrary.init(this._onImagesLoaded, this._onAllImagesLoaded, this);
 
-    s_oSpriteLibrary.addSprite("but_play", "but_play.png");
-    s_oSpriteLibrary.addSprite("but_home", "but_home.png");
-    s_oSpriteLibrary.addSprite("but_restart", "but_restart.png");
-    s_oSpriteLibrary.addSprite("msg_box", "msg_box.png");
-    s_oSpriteLibrary.addSprite("bg_menu", "bg_menu.jpg");
-    s_oSpriteLibrary.addSprite("bg_game", "bg_game.jpg");
-    s_oSpriteLibrary.addSprite("but_exit", "but_exit.png");
-    s_oSpriteLibrary.addSprite("audio_icon", "audio_icon.png");
-    //s_oSpriteLibrary.addSprite("but_credits", "but_credits.png");
-    /*s_oSpriteLibrary.addSprite(
+    s_oSpriteLibrary.addSprite("but_play", "./sprites/but_play.png");
+    s_oSpriteLibrary.addSprite("but_home", "./sprites/but_home.png");
+    s_oSpriteLibrary.addSprite("but_restart", "./sprites/but_restart.png");
+    s_oSpriteLibrary.addSprite("msg_box", "./sprites/msg_box.png");
+    s_oSpriteLibrary.addSprite("bg_menu", "./sprites/bg_menu.jpg");
+    s_oSpriteLibrary.addSprite("bg_game", "./sprites/bg_game.jpg");
+    s_oSpriteLibrary.addSprite("but_exit", "./sprites/but_exit.png");
+    s_oSpriteLibrary.addSprite("audio_icon", "./sprites/audio_icon.png");
+    s_oSpriteLibrary.addSprite("but_credits", "./sprites/but_credits.png");
+    s_oSpriteLibrary.addSprite(
       "but_fullscreen",
-      "but_fullscreen.png"
-    );*/
-    s_oSpriteLibrary.addSprite("ctl_logo", "ctl_logo.png");
-    s_oSpriteLibrary.addSprite("but_yes", "but_yes.png");
-    // s_oSpriteLibrary.addSprite("but_settings", "but_settings.png");
-    // s_oSpriteLibrary.addSprite("bg_help", "bg_help.png");
-    s_oSpriteLibrary.addSprite("win_amount_bg", "win_amount_bg.png");
-    s_oSpriteLibrary.addSprite("gui_bg", "gui_bg.png");
-    s_oSpriteLibrary.addSprite("but_generic", "but_generic.png");
-    s_oSpriteLibrary.addSprite("but_generic_small", "but_generic_small.png");
-    s_oSpriteLibrary.addSprite("paytable_portrait", "paytable_portrait.png");
-    s_oSpriteLibrary.addSprite("paytable_landscape", "paytable_landscape.png");
-    s_oSpriteLibrary.addSprite("but_no", "but_no.png");
-    s_oSpriteLibrary.addSprite("logo_menu", "logo_menu.png");
+      "./sprites/but_fullscreen.png"
+    );
+    s_oSpriteLibrary.addSprite("ctl_logo", "./sprites/ctl_logo.png");
+    s_oSpriteLibrary.addSprite("but_yes", "./sprites/but_yes.png");
+    s_oSpriteLibrary.addSprite("but_settings", "./sprites/but_settings.png");
+    s_oSpriteLibrary.addSprite("bg_help", "./sprites/bg_help.png");
+    s_oSpriteLibrary.addSprite("win_amount_bg", "./sprites/win_amount_bg.png");
+    s_oSpriteLibrary.addSprite("gui_bg", "./sprites/gui_bg.png");
+    s_oSpriteLibrary.addSprite("but_generic", "./sprites/but_generic.png");
+    s_oSpriteLibrary.addSprite(
+      "but_generic_small",
+      "./sprites/but_generic_small.png"
+    );
+    s_oSpriteLibrary.addSprite(
+      "paytable_portrait",
+      "./sprites/paytable_portrait.png"
+    );
+    s_oSpriteLibrary.addSprite(
+      "paytable_landscape",
+      "./sprites/paytable_landscape.png"
+    );
+    s_oSpriteLibrary.addSprite("but_no", "./sprites/but_no.png");
+    s_oSpriteLibrary.addSprite("logo_menu", "./sprites/logo_menu.png");
 
     for (var k = 0; k < NUM_SYMBOLS; k++) {
       for (var t = 0; t < 25; t++) {
         s_oSpriteLibrary.addSprite(
           "symbol_" + k + "_" + t,
-          "symbol_" + k + "/symbol_" + k + "_" + t + ".png"
+          "./sprites/symbol_" + k + "/symbol_" + k + "_" + t + ".png"
         );
       }
     }
@@ -210,14 +219,14 @@ function CMain(oData) {
     for (var i = 0; i < 25; i++) {
       s_oSpriteLibrary.addSprite(
         "win_frame_anim_" + i,
-        "win_frame_anim/win_frame_anim_" + i + ".png"
+        "./sprites/win_frame_anim/win_frame_anim_" + i + ".png"
       );
     }
 
     for (var i = 0; i < 54; i++) {
       s_oSpriteLibrary.addSprite(
         "silver_scratch_" + i,
-        "silver_scratch/silver_scratch_" + i + ".png"
+        "./sprites/silver_scratch/silver_scratch_" + i + ".png"
       );
     }
 
