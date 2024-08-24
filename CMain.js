@@ -176,16 +176,11 @@ function CMain(oData) {
     s_oSpriteLibrary.addSprite("but_home", "./sprites/but_home.png");
     s_oSpriteLibrary.addSprite("but_restart", "./sprites/but_restart.png");
     s_oSpriteLibrary.addSprite("msg_box", "./sprites/msg_box.png");
-    s_oSpriteLibrary.addSprite("bg_menu", "./sprites/bg_menu.jpg");
     s_oSpriteLibrary.addSprite("bg_game", "./sprites/bg_game.jpg");
     s_oSpriteLibrary.addSprite("but_exit", "./sprites/but_exit.png");
     s_oSpriteLibrary.addSprite("audio_icon", "./sprites/audio_icon.png");
     s_oSpriteLibrary.addSprite("but_credits", "./sprites/but_credits.png");
-    s_oSpriteLibrary.addSprite(
-      "but_fullscreen",
-      "./sprites/but_fullscreen.png"
-    );
-    s_oSpriteLibrary.addSprite("ctl_logo", "./sprites/ctl_logo.png");
+    s_oSpriteLibrary.addSprite("but_fullscreen","./sprites/but_fullscreen.png");
     s_oSpriteLibrary.addSprite("but_yes", "./sprites/but_yes.png");
     s_oSpriteLibrary.addSprite("but_settings", "./sprites/but_settings.png");
     s_oSpriteLibrary.addSprite("bg_help", "./sprites/bg_help.png");
@@ -261,8 +256,10 @@ function CMain(oData) {
   };
 
   this.gotoGame = function () {
-    _oGame = new CGame(_oData);
-    _iState = STATE_GAME;
+    if (canPlayToday()) {
+      _oGame = new CGame(_oData);
+      _iState = STATE_GAME;
+    }
   };
 
   this.stopUpdateNoBlock = function () {

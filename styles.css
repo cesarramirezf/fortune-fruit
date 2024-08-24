@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    margin-top: 80px;
+}
+
+h1 {
+    color: #ff4500;
+}
+
+.wheel {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 30px auto;
+    animation: none;
+}
+
+.wheel img {
+    width: 100%;
+    height: 100%;
+}
+
+.spin {
+    animation: spin 4s ease-out;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#result-text {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.hidden {
+    display: none;
+}
+
+#play-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+}
+
+#play-btn:hover {
+    background-color: #cc3700;
+}
+
+.play-button:disabled {
+    opacity: 0.5;
+}
+
+#qr-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: grey;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+}
+
+#qr-btn:hover {
+    background-color: darkslategrey;
+}
+
+#list-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: goldenrod;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+}
+
+#list-btn:hover {
+    background-color: gold;
+}
+
+.dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 400px;
+    z-index: 9999;
+}
+
+.dialog-content {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.dialog-content p,
+.dialog-content label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.dialogo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.dialog-content input {
+    padding: 10px 35px;
+    font-size: 15px;
+    margin-top: 5px;
+    align-content: center;
+    align-items: center;
+}
+
+.dialog-content select {
+    padding: 10px 22px;
+    font-size: 16px;
+}
+
+.dialog-content button {
+    padding: 14px 24px;
+    font-size: 16px;
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.dialog-content button:hover {
+    background-color: #cc3700;
+}
+
+#qrcode {
+    margin-left: 5px;
+}
